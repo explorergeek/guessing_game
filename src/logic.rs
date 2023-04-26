@@ -1,6 +1,13 @@
 use std::io;
 use std::cmp::Ordering;
 
+// Parameters:
+// num: An integer value representing the number to be guessed
+// round: An integer value representing the number of rounds the user has to guess the number.
+
+// Return Value: 
+// A boolean value representing whether the user has guessed the correct number or not.
+// true if the user guessed correctly within the specified rounds, false otherwise.
 
 pub fn guess(num: i32, round: i32) -> bool {
     let mut tries = 1;
