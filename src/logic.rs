@@ -2,8 +2,9 @@ use std::io;
 use std::cmp::Ordering;
 
 
-pub fn guess(num: i32, round: i32,) -> i32 {
+pub fn guess(num: i32, round: i32) -> bool {
     let mut tries = 1;
+    let mut flag = false;
     println!("{num}");
     loop {
         if tries <= round {
@@ -30,6 +31,7 @@ pub fn guess(num: i32, round: i32,) -> i32 {
                 Ordering::Equal => {
                     println!("You guessed right!");
                     tries = 10;
+                    flag = true;
                 }
             };
         }
@@ -37,6 +39,6 @@ pub fn guess(num: i32, round: i32,) -> i32 {
             break;
         }
     }
-        return tries
+        return flag
 }
 
